@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teman Sejati? — Friendship Test</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body><div class="wrap">
+<header class="top"><div class="brand">✦ <span>TEMAN</span> SEJATI?</div><div class="tag">FRIENDSHIP TEST / 01</div></header>
+<section class="hero"><div class="eyebrow">Seberapa kenal mereka sama kamu?</div><h1>Teman asli atau<br><span class="gradient">cuma numpang lewat?</span></h1><p>Bikin kuis versimu sendiri, pilih 10 pertanyaan, lalu bagikan ke teman. Lihat siapa yang paling mengenalmu.</p></section>
+<section id="builder" class="card">
+<h2>✦ Rakit kuis kamu</h2><p class="sub">Tulis nama, buat bank pertanyaan sebanyak yang kamu mau, lalu pilih tepat 10 untuk kuis final. Jawaban benar ditandai dengan radio button.</p>
+<label for="owner">Nama pembuat kuis</label><input id="owner" type="text" maxlength="35" placeholder="Contoh: Rifki">
+<div class="stats"><span class="pill" id="poolCount">0 pertanyaan tersedia</span><span class="pill" id="chosenCount">0 / 10 dipilih</span></div>
+<div id="questionList"></div>
+<div class="actions"><button class="secondary" id="addQ">＋ Tambah pertanyaan</button><button class="ghost" id="sample">Isi contoh pertanyaan</button></div>
+<div class="actions"><button class="primary" id="makeQuiz">Buat kuis 10 pertanyaan →</button></div>
+<p class="small" id="builderMsg" aria-live="polite"></p>
+</section>
+<section id="share" class="card hidden"><h2>🎉 Kuis kamu siap!</h2><p class="sub">Link ini berisi pertanyaan dan kunci jawaban yang kamu susun. Kirim ke teman-temanmu.</p><label>Link kuis</label><input id="quizLink" type="text" readonly><div class="actions"><button class="primary" id="copyLink">Salin link</button><button class="secondary" id="nativeShare">Bagikan</button><button class="ghost" id="backEdit">Edit kuis</button></div><div class="note">Catatan: ini versi tanpa server/database. Hasil teman tidak otomatis masuk ke dashboard pembuat. Setelah selesai, teman bisa mengirim hasilnya lewat tombol bagikan hasil (WhatsApp atau aplikasi lain).</div></section>
+<section id="taking" class="card hidden"><div class="eyebrow">KUIS PERSAHABATAN</div><h2 id="quizTitle">Seberapa kenal kamu?</h2><p class="sub" id="quizIntro"></p><div class="progress"><div class="bar" id="progressBar"></div></div><div class="small" id="stepLabel"></div><h2 id="questionText" style="margin-top:12px"></h2><div id="answers"></div><div class="actions"><button class="primary" id="nextQ">Lanjut →</button></div><p class="small" id="takeMsg"></p></section>
+<section id="result" class="card hidden resultbox"><div class="eyebrow">HASIL KUIS</div><h2 id="resultTitle">Skor kamu</h2><div class="score" id="scoreText">0/10</div><h2 id="verdict"></h2><p class="sub" id="resultDesc"></p><div class="actions" style="justify-content:center"><button class="primary" id="shareResult">Kirim hasil ke pembuat kuis</button><button class="secondary" id="restart">Coba lagi</button></div><div class="note">Skor ini cuma permainan untuk seru-seruan. Teman yang lupa jawaban favoritmu belum tentu teman palsu. Persahabatan bukan ujian pilihan ganda, untungnya.</div></section>
+<footer>Made for friendship chaos ✦ Bukan alat penentu kualitas pertemanan.</footer>
+</div>
+<script src="app.js"></script>
+</body>
+  </html>
