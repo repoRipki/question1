@@ -1,4 +1,4 @@
-const API_BASE = "arsipripki-api.wkwkseseorang.workers.dev";
+const API_BASE = "https://arsipripki-api.wkwkseseorang.workers.dev";
 
 const $ = id => document.getElementById(id);
 
