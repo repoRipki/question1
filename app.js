@@ -223,7 +223,12 @@ $("makeQuiz").onclick = async () => {
             body: JSON.stringify(quiz)
         });
 
-        const result = await res.json();
+        const raw = await res.text();
+
+console.log("STATUS:", res.status);
+console.log("RESPONSE:", raw);
+
+const result = JSON.parse(raw);
 
         if (!res.ok || !result.success) {
             throw new Error(result.error || "Gagal menyimpan kuis.");
